@@ -1,33 +1,23 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Container, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import './Appbar.css';
 
 const Appbar = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        MS CARE
-                    </Typography>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-            </AppBar>
-        </Box>
+        <>
+            <Navbar className="bg" bg="none" variant="light" sticky="top" collapseOnSelect expand="lg" >
+                <Container>
+                    <Navbar.Brand href="/home"><h1 className="fs-2 fw-bold"><span className="logo">MS</span>CARE</h1></Navbar.Brand>
+                    <Navbar.Toggle />
+                    <Navbar.Collapse className="justify-content-end">
+                        <NavLink className="link fs-5 fw-bold" to="/home">Home</NavLink>
+                        <Navbar.Text>
+                        </Navbar.Text>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
     );
 };
 
