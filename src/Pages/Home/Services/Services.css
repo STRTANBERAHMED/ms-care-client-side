@@ -1,5 +1,22 @@
+.services{
+    margin-top: 30px;
+}
+.service{
+    padding: 20px;
+    color: black;
+}
+.count{
+    background-color: white;
+    color: black;
+}
 .count :hover{
     background-color: #1976D2;
     color: white;
+}
+.item{
+    background-color: #1976D2;
+    color: white;
+    width: 80px;
+    height: 55px;
     border-radius: 10px;
 }
