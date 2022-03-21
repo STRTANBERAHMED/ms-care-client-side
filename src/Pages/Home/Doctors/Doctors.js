@@ -6,30 +6,30 @@ import React from 'react';
 const Doctors = () => {
     return (
         <div className='container'>
-            <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src={img1} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Cardiologist</h5>
+            <div className="row row-cols-1 row-cols-md-3 g-4 my-5">
+                <div className="col">
+                    <div className="card h-100">
+                        <img src={img1} className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Cardiologist</h5>
                             <h1>Dr. Andre Robatson</h1>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src={img2} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Neurologist</h5>
+                <div className="col">
+                    <div className="card h-100">
+                        <img src={img2} className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Neurologist</h5>
                             <h1>Dr. Shane Watson</h1>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src={img3} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Dentist</h5>
+                <div className="col">
+                    <div className="card h-100">
+                        <img src={img3} className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Dentist</h5>
                             <h1>Dr. Abdullah Arif</h1>
                         </div>
                     </div>
