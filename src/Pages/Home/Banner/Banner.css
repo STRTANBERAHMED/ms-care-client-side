@@ -1,0 +1,12 @@
+.text h1{
+    color: white;
+}
+.text h3{
+    color: rgba(255, 255, 255, 0.938);
+}
+.text p{
+    color: rgba(255, 255, 255, 0.795);
+}
+.banner{
+    background-color: #49B0C1;
+}
