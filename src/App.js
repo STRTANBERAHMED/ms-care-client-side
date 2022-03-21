@@ -2,11 +2,11 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './App.css';
 import Home from "./Pages/Home/Home/Home";
+import Appointment from "./Pages/Others/Appointment/Appointment/Appointment";
 import NotFound from "./Pages/Others/NotFound/NotFound";
 
 function App() {
@@ -17,6 +17,8 @@ function App() {
           <Route path='/' element={<Home />} />
 
           <Route path='/home' element={<Home />} />
+
+          <Route path='/appointment' element={<Appointment />} />
 
           <Route path='*' element={<NotFound />} />
         </Routes>

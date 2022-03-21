@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import image from '../../../images/img1.jpg';
 import './Banner.css';
 
@@ -10,6 +12,7 @@ const Banner = () => {
                     <h3>Here at "MSCARE" We Offer</h3>
                     <h1>World Class Medical Treatment</h1>
                     <p>The primary goal of our practice is to provide a full range of primary care services to our patients and to do so in a caring and compassionate manner using the latest advances in medical technology and knowledge. As primary care physicians, we are trained to carefully assess a patient’s needs and, working with our patients, determine the most appropriate plan of care or treatment.</p>
+                    <NavLink to="/appointment"><Button variant="light">Book Appointment</Button></NavLink>
                 </div>
                 <div className="col-md-5">
                     <img style={{ width: '50%' }} src={image} alt="" />

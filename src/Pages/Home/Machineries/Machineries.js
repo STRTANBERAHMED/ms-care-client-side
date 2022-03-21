@@ -13,7 +13,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const Machineries = () => {
     return (
-        <div className='carousel container'>
+        <div className='carousel'>
             <Swiper spaceBetween={30} centeredSlides={true} autoplay={{
                 "delay": 6500,
                 "disableOnInteraction": false

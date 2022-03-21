@@ -1,6 +1,7 @@
 .carousel{
     width: 100%;
-    background-color: #aed4fa;
+    background-color: #1976D2;
+    color: white;
 }
 .carousel-info h1{
     font-size: 3.5rem;
