@@ -1,34 +1,59 @@
 import React from "react";
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route
 } from "react-router-dom";
 import './App.css';
+import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Home from "./Pages/Home/Home/Home";
 import Appointment from "./Pages/Others/Appointment/Appointment/Appointment";
 import Login from "./Pages/Others/Login/Login/Login";
+import PrivateRoute from "./Pages/Others/Login/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Others/Login/Register/Register";
 import NotFound from "./Pages/Others/NotFound/NotFound";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <PrivateRoute path="/appointment">
+              <Appointment />
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
 
-          <Route path='/home' element={<Home />} />
+            {/* <Route path='/' element={<Home />} />
 
-          <Route path='/appointment' element={<Appointment />} />
+            <Route path='/home' element={<Home />} />
 
-          <Route path='/login' element={<Login />} />
+            <PrivateRoute path="/appointment">
+              <Appointment />
+            </PrivateRoute>
 
-          <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
 
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </Router>
+            <Route path='/register' element={<Register />} />
+
+            <Route path='*' element={<NotFound />} /> */}
+          </Switch>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

@@ -48,7 +48,7 @@ const Footer = () => {
                             <ul>
                                 <h5>Services</h5>
                                 <li>
-                                    <a href="">Cloth Exchange</a>
+                                    <a href="">24/7 Open</a>
                                 </li>
                                 <li>
                                     <a href="">Contact</a>
@@ -66,17 +66,14 @@ const Footer = () => {
                             <ul>
                                 <h5>Your Account</h5>
                                 <li>
-                                    <a href="">Your orders</a>
+                                    <a href="">Your Appointments</a>
 
                                 </li>
                                 <li>
-                                    <a href="">Your Wishlist</a>
+                                    <a href="">Your Ratings</a>
                                 </li>
                                 <li>
                                     <a href="">Payment</a>
-                                </li>
-                                <li>
-                                    <a href="">Delivery</a>
                                 </li>
                                 <li>
                                     <a href="">Privacy policy</a>

@@ -2,7 +2,11 @@ import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import img1 from '../../../images/img3.jpg';
+import img1 from '../../../images/img7.jpg';
+import img2 from '../../../images/img8.jpg';
+import img3 from '../../../images/img9.jpg';
+import { NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import './Machineries.css';
 
 import SwiperCore, {
@@ -23,13 +27,12 @@ const Machineries = () => {
                 <SwiperSlide>
                     <div className='row p-4 align-items-center'>
                         <div className='carousel-info col-md-6'>
-                            <h1 className='fw-bold fst-italic'>Harley Davidson T Shirt</h1>
-                            <h6>under reasonable prices</h6>
+                            <h1 className='fw-bold fst-italic'>MRI Machine</h1>
+                            <h6>world best checkup</h6>
                             <div className='price'>
-                                <p>FROM</p>
-                                <h1>$73</h1>
+                                <p>under reasonable prices</p>
                             </div>
-                            <button className='buying-btn'>Start buying</button>
+                            <NavLink to="/appointment"><Button variant="light">Book Appointment</Button></NavLink>
                         </div>
                         <div className="col-md-6">
                             <img className='carousel-img rounded mx-auto d-block' src={img1} />
@@ -39,32 +42,30 @@ const Machineries = () => {
                 <SwiperSlide>
                     <div className='row p-4 align-items-center'>
                         <div className='carousel-info col-md-6'>
-                            <h1 className='fw-bold fst-italic'>Water Proof Winter Jacket</h1>
-                            <h6>under reasonable prices</h6>
+                            <h1 className='fw-bold fst-italic'>Operation Theatre</h1>
+                            <h6>world best Treatment</h6>
                             <div className='price'>
-                                <p>FROM</p>
-                                <h1>$150</h1>
+                                <p>under reasonable prices</p>
                             </div>
-                            <button className='buying-btn'>Start buying</button>
+                            <NavLink to="/appointment"><Button variant="light">Book Appointment</Button></NavLink>
                         </div>
                         <div className="col-md-6">
-                            <img className='carousel-img' src={img1} />
+                            <img className='carousel-img' src={img2} />
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='row p-4 align-items-center'>
                         <div className='carousel-info col-md-6'>
-                            <h1 className='fw-bold fst-italic'>Dorji Bari Jins Jacket</h1>
-                            <h6>under reasonable prices</h6>
+                            <h1 className='fw-bold fst-italic'>Dentist Room</h1>
+                            <h6>world best Dental checkup</h6>
                             <div className='price'>
-                                <p>FROM</p>
-                                <h1>$100</h1>
+                                <p>under reasonable prices</p>
                             </div>
-                            <button className='buying-btn'>Start buying</button>
+                            <NavLink to="/appointment"><Button variant="light">Book Appointment</Button></NavLink>
                         </div>
                         <div className="col-md-6">
-                            <img className='carousel-img' src={img1} />
+                            <img className='carousel-img' src={img3} />
                         </div>
                     </div>
                 </SwiperSlide>

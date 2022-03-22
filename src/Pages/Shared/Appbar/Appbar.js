@@ -1,9 +1,11 @@
 import React from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import { Button, Container, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Appbar.css';
 
 const Appbar = () => {
+    const { user, logOut } = useAuth();
     return (
         <>
             <Navbar className="bg" bg="none" variant="light" sticky="top" collapseOnSelect expand="lg" >
@@ -13,8 +15,12 @@ const Appbar = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <NavLink className="link fs-5 fw-bold" to="/home">Home</NavLink>
                         <NavLink className="link fs-5 fw-bold" to="/appointment">Appointment</NavLink>
-                        <NavLink className="link fs-5 fw-bold" to="/login">Login</NavLink>
+                        {user?.email ?
+                            <Button onClick={logOut} variant="light">Logout</Button>
+                            :
+                            <NavLink className="link fs-5 fw-bold" to="/login">Login</NavLink>}
                         <Navbar.Text>
+                            <a href="#login">  {user?.displayName}</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
