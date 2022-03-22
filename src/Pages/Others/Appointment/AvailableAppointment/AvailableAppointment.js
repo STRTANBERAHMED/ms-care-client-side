@@ -11,7 +11,7 @@ const bookings = [
     },
     {
         id: 2,
-        name: 'Cosmetic Dentistry',
+        name: 'Cosmetic',
         time: '09.00 AM - 10.00 AM',
         space: 8,
     },
@@ -45,21 +45,25 @@ const AvailableAppointment = ({ date }) => {
     const [bookingSuccess, setBookingSuccess] = useState(false);
 
     return (
-        <Container>
-            <Typography variant="h4" sx={{ color: 'info.main', mb: 3 }}>Available Appointments on {date.toDateString()}</Typography>
-            {bookingSuccess && <Alert severity="success">Appointment Booked successfully!</Alert>}
-            <Grid container spacing={2}>
-                {
-                    bookings.map(booking => <Booking
-                        key={booking.id}
-                        booking={booking}
-                        date={date}
-                        setBookingSuccess={setBookingSuccess}
-                    >
-                    </Booking>)
-                }
-            </Grid>
-        </Container>
+        <div>
+            <div className="m-5">
+                <div className="text-center">
+                    <h4>Available Appointments on {date.toDateString()}</h4>
+                    {bookingSuccess && <Alert severity="success">Appointment Booked successfully!</Alert>}
+                </div>
+                <div className="row row-cols-1 row-cols-md-3 g-4 my-2">
+                    {
+                        bookings.map(booking => <Booking
+                            key={booking.id}
+                            booking={booking}
+                            date={date}
+                            setBookingSuccess={setBookingSuccess}
+                        >
+                        </Booking>)
+                    }
+                </div>
+            </div>
+        </div>
     );
 };
 

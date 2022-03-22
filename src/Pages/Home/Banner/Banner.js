@@ -14,7 +14,7 @@ const Banner = () => {
                     <p>The primary goal of our practice is to provide a full range of primary care services to our patients and to do so in a caring and compassionate manner using the latest advances in medical technology and knowledge. As primary care physicians, we are trained to carefully assess a patient’s needs and, working with our patients, determine the most appropriate plan of care or treatment.</p>
                     <NavLink to="/appointment"><Button variant="light">Book Appointment</Button></NavLink>
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-5 mt-3">
                     <img style={{ width: '50%' }} src={image} alt="" />
                 </div>
             </div>
