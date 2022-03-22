@@ -1,4 +1,3 @@
-import { Container, Grid, Typography, Alert } from '@mui/material';
 import React, { useState } from 'react';
 import Booking from '../Booking/Booking';
 
@@ -49,7 +48,9 @@ const AvailableAppointment = ({ date }) => {
             <div className="m-5">
                 <div className="text-center">
                     <h4>Available Appointments on {date.toDateString()}</h4>
-                    {bookingSuccess && <Alert severity="success">Appointment Booked successfully!</Alert>}
+                    {bookingSuccess && <div className="alert alert-success" role="alert">
+                        Appointment Booked successfully!
+                    </div>}
                 </div>
                 <div className="row row-cols-1 row-cols-md-3 g-4 my-2">
                     {

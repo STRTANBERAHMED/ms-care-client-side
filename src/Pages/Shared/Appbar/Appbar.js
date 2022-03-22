@@ -16,7 +16,10 @@ const Appbar = () => {
                         <NavLink className="link fs-5 fw-bold" to="/home">Home</NavLink>
                         <NavLink className="link fs-5 fw-bold" to="/appointment">Appointment</NavLink>
                         {user?.email ?
-                            <Button onClick={logOut} variant="light">Logout</Button>
+                            <div>
+                                <NavLink to="/dashboard"><Button className="link fs-5 fw-bold" variant="none">Dashboard</Button></NavLink>
+                                <Button onClick={logOut} variant="light">Logout</Button>
+                            </div>
                             :
                             <NavLink className="link fs-5 fw-bold" to="/login">Login</NavLink>}
                         <Navbar.Text>

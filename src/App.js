@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
+import Dashboard from "./Dashboard/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home/Home";
 import Appointment from "./Pages/Others/Appointment/Appointment/Appointment";
 import Login from "./Pages/Others/Login/Login/Login";
@@ -28,6 +29,9 @@ function App() {
             <PrivateRoute path="/appointment">
               <Appointment />
             </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -37,20 +41,6 @@ function App() {
             <Route path="*">
               <NotFound></NotFound>
             </Route>
-
-            {/* <Route path='/' element={<Home />} />
-
-            <Route path='/home' element={<Home />} />
-
-            <PrivateRoute path="/appointment">
-              <Appointment />
-            </PrivateRoute>
-
-            <Route path='/login' element={<Login />} />
-
-            <Route path='/register' element={<Register />} />
-
-            <Route path='*' element={<NotFound />} /> */}
           </Switch>
         </Router>
       </AuthProvider>
